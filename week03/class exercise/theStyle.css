@@ -1,0 +1,36 @@
+body{
+  margin: 0;
+  background: #9fb0c6;
+  font-family: "Anton", sans-serif;
+}
+
+.poster{
+  position: relative;
+  height: 200vh;
+}
+
+.bg {
+  position: absolute;
+  font-size: 32vw;
+  font-weight: 500;
+  color: white;
+  transform: scaleX(2) rotate(90deg);
+}
+
+.bg:nth-child(1) { top: 5vh;  left: 60vw; }
+.bg:nth-child(2) { top: 55vh; left: 21vw; }
+.bg:nth-child(3) { top: 105vh; left: 55vw; }
+.bg:nth-child(4) { top: 155vh; left: 30vw; }
+
+.fg {
+  position: absolute;
+  font-size: 32vw;
+  font-weight: 500;
+  transform: scaleY(2);
+  color: black;
+}
+
+.fg:nth-child(5) { top: 70vh;  left: 5vw; }
+.fg:nth-child(6) { top: 110vh; left: 30vw; }
+.fg:nth-child(7) { top: 53vh;  left: 55vw; }
+.fg:nth-child(8) { top: 143vh; left: 80vw; }
