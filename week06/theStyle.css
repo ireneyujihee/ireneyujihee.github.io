@@ -1,0 +1,148 @@
+:root {
+  --bg: #0b0b0b;
+  --fg: #eee;
+  --muted: #bdbdbd;
+  --line: #333;
+  --pad: 56px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: ui-serif, Georgia, "Times New Roman", serif;
+}
+
+header.introduction {
+  display: grid;
+  grid-template-columns: 1.1fr 2fr;
+  gap: 2rem;
+  padding: 2rem var(--pad);
+}
+
+header.introduction h1 {
+  margin: 0;
+  font-size: 70px;
+}
+
+header.introduction p {
+  margin: 20px;
+  line-height: 1.6;
+  color: var(--muted);
+  max-width: 65ch;
+}
+
+.line {
+  height: 1px;
+  background: var(--line);
+  margin: 1rem var(--pad) 0;
+}
+
+main {
+  padding: 0 var(--pad) var(--pad);
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+
+.buttons button {
+  all: unset;       
+  display: grid;
+  place-items: center;
+  position: relative;
+  min-height: 240px;
+  padding: 2.5rem 1rem;
+  cursor: pointer;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: transparent;
+  text-align: center;
+  line-height: 1.2;
+  font-size: 40px;
+}
+
+.buttons button:hover {
+  background: #141414;
+  transition: 0.3s ease;
+}
+
+#breakfast::before,
+#lunch::before,
+#dinner::before {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  font-size: 1rem;
+  color: var(--muted);
+}
+
+#breakfast::before { content: "①"; }
+#lunch::before { content: "②"; }
+#dinner::before { content: "③"; }
+
+section {
+  min-height: 70vh;
+  padding: 60px var(--pad);
+  border-top: 1px solid var(--line);
+}
+
+section h2 {
+  margin: 0 0 10px;
+  font-size: 40px;
+}
+
+.mantra {
+  margin: 0 0 24px;
+  color: var(--muted);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.02);
+}
+
+@media (max-width: 900px) {
+  header.introduction {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
