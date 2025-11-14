@@ -1,0 +1,126 @@
+.home-root{
+    background:#000;
+    color:#fff;
+    min-height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro", sans-serif;
+}
+
+.home-container{
+    text-align: center;
+}
+
+.home-title{
+    font-size:3rem;
+    font-weight:400;
+    margin-bottom: 2rem;
+}
+
+.profile-row{
+    display:flex;
+    gap:1.5rem;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 2.5rem;
+}
+
+.profile-card{
+    width:130px;
+    text-decoration: none;
+    color:#e5e5e5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.profile-card .face{
+    width:130px;
+    height:130px;
+    border-radius: 4px;
+    position: relative;
+    background: #333;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border 0.2s ease;
+    border: 2px solid transparent;
+}
+
+.profile-card:hover .face {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    border-color: #fff;
+}
+
+.profile-1 .face { background: #e67e22; }
+.profile-2 .face { background: #008b8b; }
+.profile-3 .face { background: #f2a61a; }
+
+.mouth{
+    position:absolute;
+    width:60%;
+    height:26px;
+    border-bottom: 4px solid #fff;
+    border-radius:0 0 80px 80px;
+    bottom:32%;
+    left:50%;
+    transform: translateX(-50%)
+}
+
+.profile-name{
+    margin-top: 0.6rem;
+    font-size:0.9rem;
+    color:#b3b3b3;
+}
+
+.add-profile .face {
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 4px solid #b3b3b3;
+    position: relative;
+}
+
+.plus-vertical {
+    position: absolute;
+    background: #b3b3b3;
+    width: 6px;
+    height: 32px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.plus-horizontal {
+    position: absolute;
+    background: #b3b3b3;
+    width: 32px;
+    height: 6px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.manage-btn {
+    margin-top: 0.5rem;
+    padding: 0.5rem 1.6rem;
+    background: transparent;
+    border: 1px solid #666;
+    color: #ccc;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+}
+
+.manage-btn:hover {
+    border-color: #fff;
+    color: #fff;
+}
