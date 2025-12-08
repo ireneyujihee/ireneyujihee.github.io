@@ -41,11 +41,10 @@ body {
   letter-spacing: 4px;
   text-shadow: 3px 4px 0 #7a0000;
 
-  font-family: "Barrio", system-ui;   /* ✅ ADD THIS */
+  font-family: "Barrio", system-ui;
 }
 
 
-/* Doll Row */
 .doll-row {
   margin-top: 60px;
   display: flex;
@@ -53,14 +52,12 @@ body {
   align-items: flex-end;
 }
 
-/* Doll Images */
 .doll-img {
-  height: 420px;     /* adjust if needed */
+  height: 420px;
   cursor: pointer;
   transition: transform 0.15s ease, filter 0.15s ease;
 }
 
-/* Hover Effect */
 .doll-img:hover {
   transform: translateY(-10px) scale(1.05);
   filter: drop-shadow(0 12px 12px rgba(0,0,0,0.3));
