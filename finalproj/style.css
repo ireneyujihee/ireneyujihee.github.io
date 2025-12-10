@@ -23,7 +23,7 @@ body {
 }
 
 .title {
-  width: 1000px;
+  width: 1100px;
   height: auto;
   margin-bottom: 10px;
 }
@@ -53,3 +53,68 @@ body {
   box-shadow: 0 3px 0 #6b0000;
 }
 
+.game-instructions {
+  margin-top: 1px;
+  font-size: 18px;
+  font-family: "Barrio", system-ui;
+  color: #94191b;
+  text-align: center;
+  z-index: 2;
+
+}
+
+.decorations {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.heart {
+  position: absolute;
+  width: 120px;
+  animation: slowShake 6s ease-in-out infinite;
+  bottom: 10%; left: 15%;
+}
+
+.dice {
+  position: absolute;
+  width: 300px;
+  animation: slowShake2 6s ease-in-out infinite;
+  top: 10%; left: 5%;
+}
+
+.ribbon {
+  position: absolute;
+  width: 300px;
+  animation: slowShake2 6s ease-in-out infinite;
+  bottom: 5%; right: 15%;
+}
+
+.button {
+  position: absolute;
+  width:160px;
+  animation: slowShake 6s ease-in-out infinite;
+  bottom: 20%; left: 5%;
+}
+
+.star {
+  position: absolute;
+  width: 200px;
+  animation: slowShake 6s ease-in-out infinite;
+  top: 1%; right: 9%;
+}
+
+@keyframes slowShake {
+  0%   { transform: rotate(0deg) translateX(0); }
+  25%  { transform: rotate(20deg) translateX(2px); }
+  75%  { transform: rotate(-20deg) translateX(-2px); }
+  100% { transform: rotate(0deg) translateX(0); }
+}
+
+@keyframes slowShake2 {
+  0%   { transform: rotate(0deg) translateX(0); }
+  25%  { transform: rotate(-20deg) translateX(-2px); }
+  75%  { transform: rotate(20deg) translateX(2px); }
+  100% { transform: rotate(0deg) translateX(0); }
+}
